@@ -49,11 +49,11 @@ public class AddNoteActivity extends AppCompatActivity {
 
 
     private void saveNote() {
-        String titile = mBinding.titleEt.getText().toString();
+        String title = mBinding.titleEt.getText().toString();
         String desc = mBinding.descEt.getText().toString();
         int priority = mBinding.numberPicker.getValue();
 
-        if (titile.trim().isEmpty() || desc.trim().isEmpty()){
+        if (title.trim().isEmpty() || desc.trim().isEmpty()){
 
             Toast.makeText(this, "Please Enter A Proper Title And Description", Toast.LENGTH_SHORT).show();
             return;
@@ -61,7 +61,7 @@ public class AddNoteActivity extends AppCompatActivity {
 
 
         Intent intent = new Intent();
-        intent.putExtra(EXTRA_TITLE,titile);
+        intent.putExtra(EXTRA_TITLE,title);
         intent.putExtra(EXTRA_DESC,desc);
         intent.putExtra(EXTRA_PRIPRITY,priority);
 

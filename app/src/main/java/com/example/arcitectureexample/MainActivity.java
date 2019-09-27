@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity implements NoteAdapter.ItemC
                 noteViewModel.deleteAll();
 
                 Toast.makeText(this, "All Notes Deleted", Toast.LENGTH_SHORT).show();
+
                 return true;
 
             default:
